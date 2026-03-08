@@ -1,0 +1,81 @@
+{
+  "name": "@nodude/code",
+  "version": "1.0.0",
+  "description": "Production-ready Node.js backend automation framework. Reduce backend code by 80-100%.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./core": "./src/core/index.js",
+    "./auth": "./src/auth/index.js",
+    "./database": "./src/database/index.js",
+    "./middleware": "./src/middleware/index.js",
+    "./plugins": "./src/plugins/index.js",
+    "./utils": "./src/utils/index.js"
+  },
+  "bin": {
+    "abc": "./src/cli/index.js",
+    "nodude": "./src/cli/index.js"
+  },
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js tests/unit",
+    "test:integration": "node --experimental-vm-modules node_modules/jest/bin/jest.js tests/integration",
+    "lint": "eslint src",
+    "example": "node examples/minimal-api/server.js",
+    "prepublish": "npm run test && npm run lint",
+    "publish:patch": "npm version patch && npm publish --access=public",
+    "publish:minor": "npm version minor && npm publish --access=public",
+    "publish:major": "npm version major && npm publish --access=public"
+  },
+  "keywords": [
+    "backend",
+    "framework",
+    "automation",
+    "rest-api",
+    "crud",
+    "express",
+    "nodejs",
+    "jwt",
+    "auth",
+    "database"
+  ],
+  "author": "GIRISH KOR",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/girish-kor/nodude.git"
+  },
+  "homepage": "https://girishkor.dev",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^12.6.2",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.1",
+    "express-rate-limit": "^7.5.1",
+    "express-validator": "^7.3.1",
+    "helmet": "^7.2.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.23.0",
+    "morgan": "^1.10.1",
+    "pg": "^8.20.0",
+    "uuid": "^9.0.1",
+    "xss": "^1.0.15"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^8.57.1",
+    "globals": "^17.4.0",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {}
+  }
+}
