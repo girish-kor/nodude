@@ -1,6 +1,6 @@
 {
   "name": "@nodude/code",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Production-ready Node.js backend automation framework. Reduce backend code by 80-100%.",
   "type": "module",
   "main": "src/index.js",
