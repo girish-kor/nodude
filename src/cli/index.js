@@ -129,7 +129,7 @@ app.listen(PORT, () => console.log(\`🚀 Server running on http://localhost:\${
         version: "1.0.0",
         type: "module",
         scripts: { start: "node server.js", dev: "node --watch server.js" },
-        dependencies: { @nodude/code: "^1.0.0" },
+        dependencies: { "@nodude/code": "^1.0.0" },
       },
       null,
       2,
