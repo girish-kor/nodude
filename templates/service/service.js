@@ -1,4 +1,4 @@
-import { defineService } from "nodude";
+import { defineService } from "@nodude/code";
 
 export default defineService("{{name}}", {
   async execute(data) {

@@ -5,13 +5,13 @@
 ## Install
 
 ```bash
-npm install nodude
+npm install @nodude/code
 ```
 
 ## Quickstart
 
 ```js
-import { createApp } from "nodude";
+import { createApp } from "@nodude/code";
 
 const app = await createApp({
   database: { type: "mongodb", uri: process.env.MONGO_URI },
@@ -124,7 +124,7 @@ const app = await createApp({
 ## Custom Services
 
 ```js
-import { createApp, defineService } from 'nodude';
+import { createApp, defineService } from '@nodude/code';
 
 const emailService = defineService('email', {
   async sendWelcome(user) { /* ... */ }
@@ -162,7 +162,7 @@ const app = await createApp({
 ## Plugins
 
 ```js
-import { createPlugin } from "nodude/plugins";
+import { createPlugin } from "@nodude/code";
 
 const auditPlugin = createPlugin("audit", {
   install(app, options) {
@@ -178,9 +178,9 @@ const auditPlugin = createPlugin("audit", {
 
 ```bash
 npx nodude generate:model Product
-npx nodude generate:service payment
-npx nodude generate:plugin analytics
-npx nodude new my-api
+npx @nodude/code generate:service payment
+npx @nodude/code generate:plugin analytics
+npx @nodude/code new my-api
 ```
 
 ## Database Support

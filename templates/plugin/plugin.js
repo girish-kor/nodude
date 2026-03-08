@@ -1,4 +1,4 @@
-import { createPlugin } from "nodude/plugins";
+import { createPlugin } from "@nodude/code/plugins";
 
 export default createPlugin("{{name}}", {
   install(app, options = {}) {

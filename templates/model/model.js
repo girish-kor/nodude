@@ -1,4 +1,4 @@
-import { defineModel } from "nodude";
+import { defineModel } from "@nodude/code";
 
 export default defineModel("{{Name}}", {
   schema: {

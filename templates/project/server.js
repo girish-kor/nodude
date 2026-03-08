@@ -1,4 +1,4 @@
-import { createApp } from "nodude";
+import { createApp } from "@nodude/code";
 
 const app = await createApp({
   database: { type: "sqlite", filename: "./dev.db" },

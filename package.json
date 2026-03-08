@@ -15,7 +15,7 @@
   },
   "bin": {
     "abc": "./src/cli/index.js",
-    "nodude": "./src/cli/index.js"
+    "@nodude/code": "./src/cli/index.js"
   },
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",

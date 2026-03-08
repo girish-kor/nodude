@@ -52,7 +52,7 @@ async function generateService(name) {
     console.error("Service name required");
     process.exit(1);
   }
-  const content = `import { defineService } from 'nodude';
+  const content = `import { defineService } from '@nodude/code';
 
 export default defineService('${name}', {
   async doSomething(data) {
@@ -97,7 +97,7 @@ async function generateProject(name) {
 
   await writeFile(
     join(base, "server.js"),
-    `import { createApp } from 'nodude';
+    `import { createApp } from '@nodude/code';
 
 const app = await createApp({
   database: { type: 'sqlite', filename: './dev.db' },
@@ -129,7 +129,7 @@ app.listen(PORT, () => console.log(\`🚀 Server running on http://localhost:\${
         version: "1.0.0",
         type: "module",
         scripts: { start: "node server.js", dev: "node --watch server.js" },
-        dependencies: { nodude: "^1.0.0" },
+        dependencies: { @nodude/code: "^1.0.0" },
       },
       null,
       2,
@@ -148,7 +148,7 @@ app.listen(PORT, () => console.log(\`🚀 Server running on http://localhost:\${
 
 function showHelp() {
   console.log(`
-nodude CLI
+@nodude/code CLI
 
 Usage:
   abc new <project-name>         Create a new project
